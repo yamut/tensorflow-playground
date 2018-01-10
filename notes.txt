@@ -1,0 +1,16 @@
+# Train model
+
+python /tensorflow/tensorflow/examples/image_retraining/retrain.py \
+--bottleneck_dir=bottlenecks \
+--how_many_training_steps 1000 \
+--model_dir=inception \
+--output_graph=retrained_graph.pb \
+--output_labels=retrained_labels.txt \
+--image_dir images
+
+
+python tensorflow\tensorflow\examples\image_retraining\retrain.py --bottleneck_dir=bottlenecks --how_many_training_steps 2000 --model_die=inception --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --image_dir images
+
+
+# Test
+root@45d84ed40109:/tensorflow# python /star_wars/label_image.py /star_wars/jesus-sketch.jpg
